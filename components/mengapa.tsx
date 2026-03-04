@@ -7,6 +7,7 @@ import {
   PackageOpen,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
 
 interface FeatureItem {
   icon: React.ComponentType<{ className?: string }>;
@@ -95,11 +96,12 @@ export default function Mengapa() {
 
           <div className="relative">
             <div className="bg-muted relative z-10 overflow-hidden rounded-lg shadow-sm transition-all duration-300 hover:shadow-md">
-              <div className="aspect-4/3 w-full">
-                <img
-                  src="https://images.unsplash.com/photo-1567016432779-094069958ea5?w=500&auto=format&fit=crop"
-                  alt="Modern living room with pendant light and minimalist furniture"
-                  className="size-full object-cover grayscale"
+              <div className="relative aspect-4/3 w-full overflow-hidden">
+                <Image
+                  src="/mengapa.jpg"
+                  alt="Mengapa Kami"
+                  fill
+                  className="object-cover grayscale"
                   loading="lazy"
                   decoding="async"
                 />

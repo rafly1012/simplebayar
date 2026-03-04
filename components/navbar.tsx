@@ -1,10 +1,12 @@
 "use client";
 
-import { ArrowRight, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { ModeToggle } from "./mode-toggle";
+import Image from "next/image";
 
 const navItems = [
   { label: "Home", href: "#" },
@@ -17,14 +19,16 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
+    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
       <div className="container px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between mx-auto">
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-linear-to-br from-primary to-primary/80 text-primary-foreground font-bold">
-            SB
-          </div>
-          <span className="font-bold text-xl">SimpleBayar</span>
+        <Link href="/" className="flex items-center space-x-2 mt-2">
+          <Image
+            src="/logo.svg"
+            alt="SimpleBayar Logo"
+            width={360}
+            height={360}
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -42,13 +46,7 @@ export default function Navbar() {
 
         {/* CTA Button */}
         <div className="hidden lg:flex items-center space-x-4">
-          <Button variant="ghost" className="cursor-pointer">
-            Log in
-          </Button>
-          <Button className="cursor-pointer group">
-            Get Started
-            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Button>
+          <ModeToggle />
         </div>
 
         {/* Mobile Menu Button */}
@@ -82,15 +80,6 @@ export default function Navbar() {
               </Link>
             ))}
           </nav>
-          <div className="flex flex-col space-y-2 pt-4 border-t">
-            <Button variant="outline" className="w-full cursor-pointer">
-              Log in
-            </Button>
-            <Button className="w-full cursor-pointer">
-              Get Started
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </div>
         </div>
       </div>
     </header>

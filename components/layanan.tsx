@@ -1,11 +1,3 @@
-import {
-  BookCheck,
-  ChartPie,
-  FolderSync,
-  Goal,
-  Users,
-  Zap,
-} from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { AnimateIcon } from "./animate-ui/icons/icon";
 import { Router } from "./animate-ui/icons/router";
@@ -14,43 +6,50 @@ import { LockKeyhole } from "./animate-ui/icons/lock-keyhole";
 import { CloudUpload } from "./animate-ui/icons/cloud-upload";
 import { SlidersHorizontal } from "./animate-ui/icons/sliders-horizontal";
 import { Layers } from "./animate-ui/icons/layers";
+import Image from "next/image";
 
 const features = [
   {
     icon: Router,
     title: "IP PUBLIC GATEWAY",
     description:
-      "Easily uncover untapped areas to explore and expand your reach effortlessly.",
+      "Menyediakan IP publik stabil dan aman untuk akses server, CCTV, atau layanan jaringan dari mana saja.",
+    image: "/ip-public-gateway.jpg",
   },
   {
     icon: LockKeyhole,
     title: "VPN PREMIUM",
     description:
-      "Create valuable content that resonates, inspires trust, and positions you as an expert.",
+      "Layanan VPN cepat dan terenkripsi untuk keamanan akses data serta koneksi jarak jauh yang aman.",
+    image: "/vpn-premium.jpg",
   },
   {
     icon: CloudUpload,
     title: "SETUP/BAYAR HOSTING",
     description:
-      "Gain immediate, actionable insights with a quick glance, enabling fast decision-making.",
+      "Bantuan setup dan pembayaran hosting agar website Anda langsung online tanpa ribet.",
+    image: "/setup-bayar-hosting.jpg",
   },
   {
     icon: Layers,
     title: "SETUP/BAYAR SERVER",
     description:
-      "Boost audience engagement with interactive features like polls, quizzes, and forms.",
+      "Konfigurasi dan manajemen server (VPS/Dedicated) yang optimal, aman, dan siap digunakan.",
+    image: "/setup-bayar-server.jpg",
   },
   {
     icon: SlidersHorizontal,
     title: "PEMBUATAN APLIKASI/WEBSITE",
     description:
-      "Streamline your processes by automating repetitive tasks, saving time and reducing effort.",
+      "Pengembangan aplikasi dan website profesional, responsif, dan sesuai kebutuhan bisnis Anda.",
+    image: "/pembuatan-aplikasi-website.jpg",
   },
   {
     icon: Bot,
     title: "KONSULTASI IT",
     description:
-      "Supercharge your growth by implementing strategies that drive results quickly and efficiently.",
+      "Solusi dan strategi IT yang tepat untuk meningkatkan efisiensi, keamanan, dan performa bisnis.",
+    image: "/konsultasi-it.jpg",
   },
 ];
 
@@ -78,7 +77,14 @@ export default function Layanan() {
                   </p>
                 </CardHeader>
                 <CardContent className="mt-auto px-0 pb-0">
-                  <div className="ml-6 h-40 rounded-tl-xl bg-muted transform-gpu transition-transform duration-300 ease-out group-hover:scale-110" />
+                  <div className="relative ml-6 h-40 w-full">
+                    <Image
+                      src={feature.image}
+                      alt={feature.title}
+                      fill
+                      className="rounded-tl-xl object-cover transform-gpu transition-transform duration-300 ease-out group-hover:scale-110"
+                    />
+                  </div>
                 </CardContent>
               </Card>
             </AnimateIcon>

@@ -1,6 +1,7 @@
 import { Mail, MessageCircleMore } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Tentang() {
   return (
@@ -21,9 +22,11 @@ export default function Tentang() {
             teknologi yang inovatif dan aman bagi bisnis Anda.
           </p>
           <div className="mt-12 flex items-center gap-4">
-            <Button size="lg" className="rounded-full group">
-              Email
-              <Mail className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            <Button size="lg" className="rounded-full group" asChild>
+              <a href="mailto:mail@simplebayar.store">
+                Email
+                <Mail className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </a>
             </Button>
             <Button
               className="rounded-full group"
@@ -41,7 +44,14 @@ export default function Tentang() {
             </Button>
           </div>
         </div>
-        <div className="aspect-video w-full rounded-xl bg-accent" />
+        <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-accent">
+          <Image
+            src="/tentang.jpg"
+            alt="Tentang Kami"
+            fill
+            className="object-cover"
+          />
+        </div>
       </div>
     </div>
   );
