@@ -4,6 +4,8 @@ import Layanan from "@/components/layanan";
 import Tentang from "@/components/tentang";
 import Mengapa from "@/components/mengapa";
 import Footer from "@/components/footer";
+import { LayoutDashboard } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -35,6 +37,31 @@ export default function Home() {
         </div>
       </div>
       <Footer />
+
+      <Button className="fixed bottom-20 right-6 z-50" asChild>
+        <a
+          href="https://dashboard.simplebayar.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <LayoutDashboard />
+          <span>Login Dashboard</span>
+        </a>
+      </Button>
+
+      <Button
+        className="fixed bottom-6 right-6 z-50"
+        variant="secondary"
+        asChild
+      >
+        <a
+          href="https://api.whatsapp.com/send/?phone=%2B6283892906585&text=Halo+SimpleBayar&type=phone_number&app_absent=0"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>Chat WhatsApp</span>
+        </a>
+      </Button>
     </>
   );
 }

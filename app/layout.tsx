@@ -19,9 +19,14 @@ export const metadata: Metadata = {
     "SimpleBayar adalah penyedia solusi teknologi yang membantu bisnis di Indonesia dengan hosting website, keamanan siber, dan konsultasi IT.",
   metadataBase: new URL("https://simplebayar.vercel.app/"),
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: [
+      {
+        url: "/favicon.png",
+        href: "/favicon.png",
+        sizes: "any",
+        type: "image/png",
+      },
+    ],
   },
   openGraph: {
     title: "SimpleBayar",
@@ -49,6 +54,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/favicon.png" type="image/png" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
