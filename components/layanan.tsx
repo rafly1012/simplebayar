@@ -14,42 +14,42 @@ const features = [
     title: "IP PUBLIC GATEWAY",
     description:
       "Menyediakan IP publik stabil dan aman untuk akses server, CCTV, atau layanan jaringan dari mana saja.",
-    image: "/ip-public-gateway.jpg",
+    image: "/ip-public-gateway.png",
   },
   {
     icon: LockKeyhole,
     title: "VPN PREMIUM",
     description:
       "Layanan VPN cepat dan terenkripsi untuk keamanan akses data serta koneksi jarak jauh yang aman.",
-    image: "/vpn-premium.jpg",
+    image: "/vpn-premium.png",
   },
   {
     icon: CloudUpload,
     title: "SETUP/BAYAR HOSTING",
     description:
       "Bantuan setup dan pembayaran hosting agar website Anda langsung online tanpa ribet.",
-    image: "/setup-bayar-hosting.jpg",
+    image: "/setup-bayar-hosting.png",
   },
   {
     icon: Layers,
     title: "SETUP/BAYAR SERVER",
     description:
       "Konfigurasi dan manajemen server (VPS/Dedicated) yang optimal, aman, dan siap digunakan.",
-    image: "/setup-bayar-server.jpg",
+    image: "/setup-bayar-server.png",
   },
   {
     icon: SlidersHorizontal,
     title: "PEMBUATAN APLIKASI/WEBSITE",
     description:
       "Pengembangan aplikasi dan website profesional, responsif, dan sesuai kebutuhan bisnis Anda.",
-    image: "/pembuatan-aplikasi-website.jpg",
+    image: "/pembuatan-aplikasi-website.png",
   },
   {
     icon: Bot,
     title: "KONSULTASI IT",
     description:
       "Solusi dan strategi IT yang tepat untuk meningkatkan efisiensi, keamanan, dan performa bisnis.",
-    image: "/konsultasi-it.jpg",
+    image: "/konsultasi-it.png",
   },
 ];
 
